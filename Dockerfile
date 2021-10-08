@@ -10,7 +10,7 @@ RUN apt-get update -qq && \
     pip install --upgrade pycrypto pywinrm && \
     python3 -m pip install ansible && \
     mkdir -p /etc/ansible/hosts && \
-    echo 'localhost' > /etc/ansible/hosts
+    echo 'localhost' > /etc/ansible
 
 
 # default command: display Ansible version
