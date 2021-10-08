@@ -9,8 +9,8 @@ RUN apt-get update -qq && \
     apt-get install -y sshpass openssh-client && \
     pip install --upgrade pycrypto pywinrm && \
     python3 -m pip install ansible && \
-    mkdir -p /etc/ansible/hosts && \
-    echo 'localhost' > /etc/ansible
+    mkdir -p /etc/ansible/ && \
+    echo 'localhost' > /etc/ansible/hosts
 
 
 # default command: display Ansible version
