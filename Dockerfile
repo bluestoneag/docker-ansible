@@ -4,6 +4,7 @@ FROM ubuntu:latest
 MAINTAINER BlueStone <support@bluestone.ch>
 
 ENV TZ=Europe/Zurich
+ENV DEBIAN_FRONTEND=noninteractive
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update -qq && \
