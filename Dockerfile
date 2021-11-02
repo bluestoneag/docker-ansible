@@ -13,6 +13,7 @@ RUN apt-get update -qq && \
     pip install --upgrade pycrypto pywinrm && \
     pip install pywinrm[kerberos] && \
     python3 -m pip install ansible && \
+    ansible-galaxy collection install community.windows && \
     mkdir -p /etc/ansible/ && \
     echo 'localhost' > /etc/ansible/hosts
 
