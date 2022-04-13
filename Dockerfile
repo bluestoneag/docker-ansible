@@ -14,6 +14,7 @@ RUN apt-get update -qq && \
     pip install pywinrm[kerberos] && \
     python3 -m pip install ansible && \
     ansible-galaxy collection install community.windows && \
+    ansible-galaxy collection install community.docker && \
     mkdir -p /etc/ansible/ && \
     echo 'localhost' > /etc/ansible/hosts
 
