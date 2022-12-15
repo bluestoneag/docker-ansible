@@ -15,6 +15,7 @@ RUN apt-get update -qq && \
     python3 -m pip install ansible && \
     ansible-galaxy collection install community.windows && \
     ansible-galaxy collection install community.docker && \
+    ansible-galaxy install nvidia.nvidia_driver && \
     mkdir -p /etc/ansible/ && \
     echo 'localhost' > /etc/ansible/hosts
 
